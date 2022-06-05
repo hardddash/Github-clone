@@ -1,20 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {IRepository} from "../interfaces";
 
 interface IProps {
-    repositories: {
-        node: {
-            name: string
-        }
-    }[]
+    repositories: IRepository[]
 }
 
 const ListOfRepositories: React.FC<IProps> = ({repositories}) => {
 
     const renderList = (): JSX.Element[] => {
-        return repositories.map((repository, index) => {
+        return repositories.map((repository) => {
             return (
-                <li>
-                    {repository.node.name}
+                <li key={repository.node.databaseId}>
+                    {repository.node.name + " " + repository.node.isPrivate + " " + repository.node.databaseId}
                 </li>
             )
         })

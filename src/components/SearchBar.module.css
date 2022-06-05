@@ -1,0 +1,76 @@
+.searchBarContainer {
+}
+
+.optionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: 5px;
+    border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.optionsContainer input {
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--color-neutral-light);
+    padding: 5px 12px;
+}
+
+@media only screen and (min-width: 768px) {
+    .selectsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.selectsContainer {
+    margin-left: 26px;
+}
+
+
+.optionsContainer input {
+    width: 100%;
+    min-width: 100px;
+}
+
+.hintContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 5px;
+    border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.clearFilterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.clearFilterContainer span{
+    color: var(--color-neutral-emphasis);
+    margin-left: 8px;
+}
+
+.clearFilterContainer:hover span  {
+    color: var(--color-accent);
+}
+
+.clearFilterContainer:hover .svgCancel  {
+    background-color: var(--color-accent);
+}
+
+.svgCancel {
+    margin-top: 2px;
+    height: 16px;
+    width: 16px;
+    padding: 1px;
+    fill: var(--color-bg);
+    background-color: var(--color-neutral-emphasis);
+    border-radius: 6px;
+    justify-centent: center
+}
