@@ -27,6 +27,7 @@ You will also see any lint errors in the console.
 - Add "Type", "Language" and "Select order" filters functionality 
 - Add updating of StargazerCount property of repository, after clicking the "Star" button
 - Add the "Past year of activity" graph on the repository card. Now it is replaced with a static image
+- Add pagination
 - Add other pages
 - Write tests
 - Add storybook and divide the components
