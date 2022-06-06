@@ -19,7 +19,6 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories, setReposito
             searchTerm: searchTerm
         };
         getRepositories(options);
-        setRepositoriesNumber(repositories.length)
     }, []);
 
     const getRepositories = (options: any) => {
@@ -63,6 +62,8 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories, setReposito
         }).then(response => response.json())
             .then(data => {
                 setRepositories(data.data.search.edges);
+                if (repositories.length === 0 && searchTerm === '')
+                    setRepositoriesNumber(data.data.search.edges.length);
             })
             .catch(err => console.error(JSON.stringify(err)));
     };
