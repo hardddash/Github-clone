@@ -24,7 +24,7 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
     const getRepositories = (options: any) => {
         const body = {
             "query": `
-      query {
+        query {
           search(query: \"${options.searchTerm} in:name user:${process.env.REACT_APP_GITHUB_USERNAME}\", type: REPOSITORY, first: 50) {
             edges {
               node {
@@ -50,8 +50,7 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
               }
             }
           }
-        
-      }
+        }
       `
         }
         fetch(process.env.REACT_APP_GITHUB_BASEURL || "", {
@@ -86,9 +85,9 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
                     <Select
                         options={
                             [
-                                { value: 'all', label: 'All' },
-                                { value: 'public', label: 'Public' },
-                                { value: 'private', label: 'Private' }
+                                {value: 'all', label: 'All'},
+                                {value: 'public', label: 'Public'},
+                                {value: 'private', label: 'Private'}
                             ]
                         }
                         styles={customStyles}
@@ -98,11 +97,11 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
                     <Select
                         options={
                             [
-                                { value: 'all', label: 'All' },
-                                { value: 'typescript', label: 'Typescript' },
-                                { value: 'javascript', label: 'Javascript' },
-                                { value: 'html', label: 'HTML' },
-                                { value: 'java', label: 'Java' }
+                                {value: 'all', label: 'All'},
+                                {value: 'typescript', label: 'Typescript'},
+                                {value: 'javascript', label: 'Javascript'},
+                                {value: 'html', label: 'HTML'},
+                                {value: 'java', label: 'Java'}
                             ]
                         }
                         styles={customStyles}
@@ -112,9 +111,9 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
                     <Select
                         options={
                             [
-                                { value: 'last updated', label: 'Last updated' },
-                                { value: 'name', label: 'Name' },
-                                { value: 'stars', label: 'Stars' },
+                                {value: 'last updated', label: 'Last updated'},
+                                {value: 'name', label: 'Name'},
+                                {value: 'stars', label: 'Stars'},
                             ]
                         }
                         styles={customStyles}
@@ -130,7 +129,10 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
                     <p>
                         <b>{repositories.length}</b> results for repositories matching <b>{searchTerm}</b>
                     </p>
-                    <button className={style.clearFilterContainer} onClick={() => { setSearchTerm('')} }>
+                    <button className={style.clearFilterContainer} onClick={() => {
+                        setSearchTerm('');
+                        getRepositories({searchTerm: ''})
+                    }}>
                         <svg className={style.svgCancel}>
                             <path fillRule="evenodd"
                                   d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>

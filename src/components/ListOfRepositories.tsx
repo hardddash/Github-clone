@@ -1,4 +1,5 @@
 import React from 'react';
+import RepositoryCard from "./RepositoryCard";
 import {IRepository} from "../interfaces";
 
 interface IProps {
@@ -11,7 +12,7 @@ const ListOfRepositories: React.FC<IProps> = ({repositories}) => {
         return repositories.map((repository) => {
             return (
                 <li key={repository.node.databaseId}>
-                    {repository.node.name + " " + repository.node.isPrivate + " " + repository.node.databaseId}
+                    <RepositoryCard repository={repository}/>
                 </li>
             )
         })

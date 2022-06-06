@@ -1,12 +1,8 @@
-.searchBarContainer {
-}
-
 .optionsContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 70px;
-    padding: 5px;
     border-bottom: 1px solid var(--color-neutral-light);
 }
 
@@ -29,10 +25,22 @@
     margin-left: 26px;
 }
 
-
 .optionsContainer input {
     width: 100%;
     min-width: 100px;
+}
+
+.optionsContainer input:hover {
+    border: 1px solid var(--color-neutral);
+}
+
+.optionsContainer input:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+.optionsContainer input:hover:focus {
+    outline: 2px solid var(--color-accent);
+    border: 1px solid var(--color-accent);
 }
 
 .hintContainer {
@@ -50,24 +58,21 @@
     justify-content: space-between;
 }
 
-
-.clearFilterContainer span{
+.clearFilterContainer span {
     color: var(--color-neutral-emphasis);
     margin-left: 8px;
 }
 
-.clearFilterContainer:hover span  {
+.clearFilterContainer:hover span {
     color: var(--color-accent);
 }
 
-.clearFilterContainer:hover .svgCancel  {
+.clearFilterContainer:hover .svgCancel {
     background-color: var(--color-accent);
 }
 
 .svgCancel {
     margin-top: 2px;
-    height: 16px;
-    width: 16px;
     padding: 1px;
     fill: var(--color-bg);
     background-color: var(--color-neutral-emphasis);

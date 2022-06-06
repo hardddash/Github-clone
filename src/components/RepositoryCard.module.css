@@ -1,0 +1,94 @@
+.repositoryCardContainer {
+    display: grid;
+    row-gap: 8px;
+    column-gap: 8px;
+    grid-template-rows: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.repositoryCardItem1 {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.repositoryCardItem1 a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.repositoryCardItem1 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.circledLabel {
+    margin-left: 8px;
+    border: 1px solid var(--color-neutral-light);
+    border-radius: 20px;
+    padding: 2px 5px;
+    color: var(--color-neutral-light);
+    font-weight: bold;
+}
+
+.repositoryCardItem2 {
+    grid-row: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    align-self: end;
+    justify-self: right;
+}
+
+.starLabel {
+    border: 1px solid var(--color-neutral-light);
+    border-radius: 6px;
+    padding: 2px 10px;
+}
+
+.starLabel svg, .starLabel span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+.repositoryCardItem3 {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.repositoryCardItem4 {
+    padding-top: 10px;
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.label {
+    display: inline;
+    margin-right: 16px;
+}
+
+svg {
+    margin-right: 4px;
+}
+
+.dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-bottom: -2px;
+    margin-right: 4px;
+}
+
+.repositoryCardItem5 {
+    grid-row: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    align-self: end;
+    justify-self: end;
+}

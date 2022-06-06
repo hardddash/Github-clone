@@ -8,7 +8,6 @@ function App() {
 
     const [repositories, setRepositories] = useState<IRepository[]>([]);
 
-
     return (
         <div className="App">
             <SearchBar repositories={repositories} setRepositories={setRepositories}/>
