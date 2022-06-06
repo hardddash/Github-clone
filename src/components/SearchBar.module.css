@@ -4,6 +4,7 @@
     justify-content: space-between;
     min-height: 70px;
     border-bottom: 1px solid var(--color-neutral-light);
+    padding: 8px 0px;
 }
 
 .optionsContainer input {
@@ -13,7 +14,7 @@
     padding: 5px 12px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .selectsContainer {
         display: flex;
         align-items: center;
@@ -72,7 +73,6 @@
 }
 
 .svgCancel {
-    margin-top: 2px;
     padding: 1px;
     fill: var(--color-bg);
     background-color: var(--color-neutral-emphasis);

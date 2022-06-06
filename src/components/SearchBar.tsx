@@ -7,10 +7,10 @@ import {customStyles} from "./reactSelectCustomStyles";
 interface IProps {
     repositories: IRepository[],
     setRepositories: React.Dispatch<React.SetStateAction<IRepository[]>>
+    setRepositoriesNumber: React.Dispatch<React.SetStateAction<number>>
 }
 
-
-const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
+const SearchBar: React.FC<IProps> = ({repositories, setRepositories, setRepositoriesNumber}) => {
 
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -19,6 +19,7 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
             searchTerm: searchTerm
         };
         getRepositories(options);
+        setRepositoriesNumber(repositories.length)
     }, []);
 
     const getRepositories = (options: any) => {

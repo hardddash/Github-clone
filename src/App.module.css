@@ -5,12 +5,12 @@
     column-gap: 16px;
     max-width: 1140px;
     margin: auto;
-    /*grid-template-rows: 30px;*/
+    padding: 20px;
 }
 
 .appItem1 {
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     grid-column: 1;
 }
 
@@ -24,11 +24,11 @@
     grid-column: 2;
 }
 
-/*@media only screen and (max-width: 1180px) {*/
-/*    .appContainer {*/
-/*        margin: 20px;*/
-/*    }*/
-/*}*/
+.appItem4 {
+    grid-row: 3;
+    grid-column: 2;
+}
+
 @media only screen and (max-width: 767px) {
     .appContainer {
         display: inline-block;

@@ -12,8 +12,8 @@ export const customStyles = {
     container: (styles: any) => ({
         ...styles,
         margin: '0px',
-        "@media only screen and (max-width: 767px)": {
-            ...styles["@media only screen and (max-width: 767px)"],
+        "@media only screen and (max-width: 1024px)": {
+            ...styles["@media only screen and (max-width: 1024px)"],
             marginBottom: '6px'
         },
     }),

@@ -26,3 +26,9 @@ export interface IUserInfo {
     name: string,
     login: string
 }
+
+export interface INavBar {
+    repositoriesNumber: number,
+    projectsNumber: number,
+    packagesNumber: number,
+}

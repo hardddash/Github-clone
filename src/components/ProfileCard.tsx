@@ -42,7 +42,7 @@ const ProfileCard = () => {
     };
 
     return (
-        <div>
+        <div className={style.profileCardContainer}>
             <img className={style.userAvatar} src={userInfo.avatarUrl} alt="avatar" />
             <h2 className={style.userName}>{userInfo.name}</h2>
             <h4 className={style.userLogin}>{userInfo.login}</h4>
