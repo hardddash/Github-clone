@@ -9,6 +9,14 @@ export const customStyles = {
         minHeight: '32px',
         height: '32px',
     }),
+    container: (styles: any) => ({
+        ...styles,
+        margin: '0px',
+        "@media only screen and (max-width: 767px)": {
+            ...styles["@media only screen and (max-width: 767px)"],
+            marginBottom: '6px'
+        },
+    }),
     valueContainer: (provided: any) => ({
         ...provided,
         height: '32px',

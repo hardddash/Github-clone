@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {IRepository} from "../interfaces";
 import style from "./RepositoryCard.module.css";
 
@@ -25,12 +25,15 @@ function timeDifference(date: string): string {
 
 const RepositoryCard: React.FC<IProps> = ({repository}) => {
 
+    const [isStarred, setIsStarred] = useState(false);
+
     const unstarredId = `unstarred${repository.node.databaseId}`;
     const starredId = `starred${repository.node.databaseId}`;
 
     function replace( hide: string, show: string ) {
         document.getElementById(hide)!.style.display="none";
         document.getElementById(show)!.style.display="inline-block";
+        setIsStarred(!isStarred);
     }
 
     return (
@@ -106,7 +109,7 @@ const RepositoryCard: React.FC<IProps> = ({repository}) => {
                         }
                     </div>
                     <div className={style.repositoryCardItem5}>
-                        <img src={require("../images/graph.JPG")} style={{width: "155px", height: "30px"}} />
+                        <img src={require("../images/graph.JPG")} style={{width: "155px", height: "30px"}} alt="Past year of activity" />
                     </div>
                 </div>
             }

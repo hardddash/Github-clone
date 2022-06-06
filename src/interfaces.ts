@@ -19,3 +19,10 @@ export interface IRepository {
         databaseId: number
     }
 }
+
+export interface IUserInfo {
+    avatarUrl: string,
+    bio: string,
+    name: string,
+    login: string
+}

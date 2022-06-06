@@ -1,0 +1,37 @@
+.appContainer {
+    overflow: auto;
+    display: grid;
+    row-gap: 0px;
+    column-gap: 16px;
+    max-width: 1140px;
+    margin: auto;
+    /*grid-template-rows: 30px;*/
+}
+
+.appItem1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
+}
+
+.appItem2 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.appItem3 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/*@media only screen and (max-width: 1180px) {*/
+/*    .appContainer {*/
+/*        margin: 20px;*/
+/*    }*/
+/*}*/
+@media only screen and (max-width: 767px) {
+    .appContainer {
+        display: inline-block;
+        margin: auto;
+    }
+}

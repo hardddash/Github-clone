@@ -1,0 +1,20 @@
+.userAvatar {
+    border-radius: 50%;
+}
+
+.userName {
+    font-size: 2em;
+    margin: 10px 0px 0px 0px;
+}
+
+.userLogin {
+    font-size: 1.8em;
+    font-weight: lighter;
+    font-color: var(--color-neutral);
+    margin: 0px;
+}
+
+.userDescription {
+    font-size: 1.3em;
+    margin: 20px 0px;
+}

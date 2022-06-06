@@ -24,34 +24,33 @@ const SearchBar: React.FC<IProps> = ({repositories, setRepositories}) => {
     const getRepositories = (options: any) => {
         const body = {
             "query": `
-        query {
-          search(query: \"${options.searchTerm} in:name user:${process.env.REACT_APP_GITHUB_USERNAME}\", type: REPOSITORY, first: 50) {
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  description
-                  forkCount
-                  isPrivate
-                  languages(first: 1, orderBy: {field: SIZE, direction: DESC}) {
-                    nodes {
-                      color
+            query {
+              search(query: \"${options.searchTerm} in:name user:${process.env.REACT_APP_GITHUB_USERNAME}\", type: REPOSITORY, first: 50) {
+                edges {
+                  node {
+                    ... on Repository {
                       name
+                      description
+                      forkCount
+                      isPrivate
+                      languages(first: 1, orderBy: {field: SIZE, direction: DESC}) {
+                        nodes {
+                          color
+                          name
+                        }
+                      }
+                      licenseInfo {
+                        name
+                      }
+                      updatedAt
+                      url
+                      stargazerCount
+                      databaseId
                     }
                   }
-                  licenseInfo {
-                    name
-                  }
-                  updatedAt
-                  url
-                  stargazerCount
-                  databaseId
                 }
               }
-            }
-          }
-        }
-      `
+            }`
         }
         fetch(process.env.REACT_APP_GITHUB_BASEURL || "", {
             method: "POST",
